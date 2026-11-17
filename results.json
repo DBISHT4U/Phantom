@@ -1,0 +1,638 @@
+{
+  "username": "DBISHT4U",
+  "scan_time_secs": 8.34903759,
+  "total_sites": 78,
+  "found": 24,
+  "not_found": 52,
+  "errors": 2,
+  "results": [
+    {
+      "site": "npm",
+      "url": "https://www.npmjs.com/~DBISHT4U",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 51
+    },
+    {
+      "site": "Lichess",
+      "url": "https://lichess.org/@/DBISHT4U",
+      "category": "gaming",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 56
+    },
+    {
+      "site": "Minecraft",
+      "url": "https://namemc.com/profile/DBISHT4U",
+      "category": "gaming",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 76
+    },
+    {
+      "site": "LeetCode",
+      "url": "https://leetcode.com/u/DBISHT4U",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 89
+    },
+    {
+      "site": "Xbox Gamertag",
+      "url": "https://xboxgamertag.com/search/DBISHT4U",
+      "category": "gaming",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 94
+    },
+    {
+      "site": "Quora",
+      "url": "https://www.quora.com/profile/DBISHT4U",
+      "category": "forum",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 133
+    },
+    {
+      "site": "ArtStation",
+      "url": "https://www.artstation.com/DBISHT4U",
+      "category": "creative",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 138
+    },
+    {
+      "site": "DeviantArt",
+      "url": "https://www.deviantart.com/DBISHT4U",
+      "category": "creative",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 170
+    },
+    {
+      "site": "500px",
+      "url": "https://500px.com/p/DBISHT4U",
+      "category": "creative",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 182
+    },
+    {
+      "site": "GitHub",
+      "url": "https://github.com/DBISHT4U",
+      "category": "dev",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 189
+    },
+    {
+      "site": "Substack",
+      "url": "https://DBISHT4U.substack.com",
+      "category": "forum",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 194
+    },
+    {
+      "site": "Codepen",
+      "url": "https://codepen.io/DBISHT4U",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 216
+    },
+    {
+      "site": "Twitch",
+      "url": "https://www.twitch.tv/DBISHT4U",
+      "category": "media",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 285
+    },
+    {
+      "site": "ProductHunt",
+      "url": "https://www.producthunt.com/@DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 119
+    },
+    {
+      "site": "Ko-fi",
+      "url": "https://ko-fi.com/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 107
+    },
+    {
+      "site": "Hashnode",
+      "url": "https://hashnode.com/@DBISHT4U",
+      "category": "forum",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 329
+    },
+    {
+      "site": "Giphy",
+      "url": "https://giphy.com/DBISHT4U",
+      "category": "media",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 344
+    },
+    {
+      "site": "Dev.to",
+      "url": "https://dev.to/DBISHT4U",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 347
+    },
+    {
+      "site": "YouTube",
+      "url": "https://www.youtube.com/@DBISHT4U",
+      "category": "media",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 353
+    },
+    {
+      "site": "TryHackMe",
+      "url": "https://tryhackme.com/p/DBISHT4U",
+      "category": "security",
+      "status": "NotFound",
+      "http_code": 429,
+      "response_time_ms": 268
+    },
+    {
+      "site": "SoundCloud",
+      "url": "https://soundcloud.com/DBISHT4U",
+      "category": "media",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 371
+    },
+    {
+      "site": "Vimeo",
+      "url": "https://vimeo.com/DBISHT4U",
+      "category": "media",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 396
+    },
+    {
+      "site": "Spotify",
+      "url": "https://open.spotify.com/user/DBISHT4U",
+      "category": "media",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 401
+    },
+    {
+      "site": "StackOverflow",
+      "url": "https://stackoverflow.com/users/DBISHT4U",
+      "category": "dev",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 421
+    },
+    {
+      "site": "Facebook",
+      "url": "https://www.facebook.com/DBISHT4U",
+      "category": "social",
+      "status": "NotFound",
+      "http_code": 400,
+      "response_time_ms": 448
+    },
+    {
+      "site": "HackTheBox",
+      "url": "https://app.hackthebox.com/users/DBISHT4U",
+      "category": "security",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 360
+    },
+    {
+      "site": "Crates.io",
+      "url": "https://crates.io/users/DBISHT4U",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 464
+    },
+    {
+      "site": "Mastodon.social",
+      "url": "https://mastodon.social/@DBISHT4U",
+      "category": "social",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 464
+    },
+    {
+      "site": "Letterboxd",
+      "url": "https://letterboxd.com/DBISHT4U",
+      "category": "media",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 69
+    },
+    {
+      "site": "PyPI",
+      "url": "https://pypi.org/user/DBISHT4U",
+      "category": "dev",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 469
+    },
+    {
+      "site": "Dailymotion",
+      "url": "https://www.dailymotion.com/DBISHT4U",
+      "category": "media",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 478
+    },
+    {
+      "site": "Freelancer",
+      "url": "https://www.freelancer.com/u/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 136
+    },
+    {
+      "site": "Chess.com",
+      "url": "https://www.chess.com/member/DBISHT4U",
+      "category": "gaming",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 492
+    },
+    {
+      "site": "Instagram",
+      "url": "https://www.instagram.com/DBISHT4U/",
+      "category": "social",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 518
+    },
+    {
+      "site": "Kaggle",
+      "url": "https://www.kaggle.com/DBISHT4U",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 522
+    },
+    {
+      "site": "Last.fm",
+      "url": "https://www.last.fm/user/DBISHT4U",
+      "category": "media",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 165
+    },
+    {
+      "site": "Fiverr",
+      "url": "https://www.fiverr.com/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 200
+    },
+    {
+      "site": "Twitter/X",
+      "url": "https://x.com/DBISHT4U",
+      "category": "social",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 536
+    },
+    {
+      "site": "Reddit",
+      "url": "https://www.reddit.com/user/DBISHT4U",
+      "category": "forum",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 563
+    },
+    {
+      "site": "LinkedIn",
+      "url": "https://www.linkedin.com/in/DBISHT4U",
+      "category": "social",
+      "status": "NotFound",
+      "http_code": 999,
+      "response_time_ms": 576
+    },
+    {
+      "site": "Behance",
+      "url": "https://www.behance.net/DBISHT4U",
+      "category": "creative",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 594
+    },
+    {
+      "site": "Vercel",
+      "url": "https://vercel.com/DBISHT4U",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 149
+    },
+    {
+      "site": "GitLab",
+      "url": "https://gitlab.com/DBISHT4U",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 620
+    },
+    {
+      "site": "Pinterest",
+      "url": "https://www.pinterest.com/DBISHT4U/",
+      "category": "social",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 629
+    },
+    {
+      "site": "Threads",
+      "url": "https://www.threads.net/@DBISHT4U",
+      "category": "social",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 645
+    },
+    {
+      "site": "BuyMeACoffee",
+      "url": "https://buymeacoffee.com/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 451
+    },
+    {
+      "site": "Patreon",
+      "url": "https://www.patreon.com/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 463
+    },
+    {
+      "site": "Notion",
+      "url": "https://DBISHT4U.notion.site",
+      "category": "other",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 232
+    },
+    {
+      "site": "Trello",
+      "url": "https://trello.com/DBISHT4U",
+      "category": "other",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 257
+    },
+    {
+      "site": "Medium",
+      "url": "https://medium.com/@DBISHT4U",
+      "category": "forum",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 706
+    },
+    {
+      "site": "Steam",
+      "url": "https://steamcommunity.com/id/DBISHT4U",
+      "category": "gaming",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 698
+    },
+    {
+      "site": "Wattpad",
+      "url": "https://www.wattpad.com/user/DBISHT4U",
+      "category": "creative",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 290
+    },
+    {
+      "site": "Replit",
+      "url": "https://replit.com/@DBISHT4U",
+      "category": "dev",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 758
+    },
+    {
+      "site": "Unsplash",
+      "url": "https://unsplash.com/@DBISHT4U",
+      "category": "creative",
+      "status": "NotFound",
+      "http_code": 401,
+      "response_time_ms": 713
+    },
+    {
+      "site": "MyAnimeList",
+      "url": "https://myanimelist.net/profile/DBISHT4U",
+      "category": "media",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 393
+    },
+    {
+      "site": "HackerOne",
+      "url": "https://hackerone.com/DBISHT4U",
+      "category": "security",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 789
+    },
+    {
+      "site": "Linktree",
+      "url": "https://linktr.ee/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 572
+    },
+    {
+      "site": "Telegram",
+      "url": "https://t.me/DBISHT4U",
+      "category": "social",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 568
+    },
+    {
+      "site": "About.me",
+      "url": "https://about.me/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 777
+    },
+    {
+      "site": "Hacker News",
+      "url": "https://news.ycombinator.com/user?id=DBISHT4U",
+      "category": "forum",
+      "status": "NotFound",
+      "http_code": 200,
+      "response_time_ms": 922
+    },
+    {
+      "site": "Keybase",
+      "url": "https://keybase.io/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 780
+    },
+    {
+      "site": "Docker Hub",
+      "url": "https://hub.docker.com/u/DBISHT4U",
+      "category": "dev",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 955
+    },
+    {
+      "site": "Tumblr",
+      "url": "https://DBISHT4U.tumblr.com",
+      "category": "social",
+      "status": "NotFound",
+      "http_code": 403,
+      "response_time_ms": 961
+    },
+    {
+      "site": "Hugging Face",
+      "url": "https://huggingface.co/DBISHT4U",
+      "category": "dev",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 509
+    },
+    {
+      "site": "Dribbble",
+      "url": "https://dribbble.com/DBISHT4U",
+      "category": "creative",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 994
+    },
+    {
+      "site": "Itch.io",
+      "url": "https://DBISHT4U.itch.io",
+      "category": "gaming",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 558
+    },
+    {
+      "site": "Bugcrowd",
+      "url": "https://bugcrowd.com/DBISHT4U",
+      "category": "security",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 946
+    },
+    {
+      "site": "Flickr",
+      "url": "https://www.flickr.com/people/DBISHT4U",
+      "category": "media",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 1029
+    },
+    {
+      "site": "HackerRank",
+      "url": "https://www.hackerrank.com/profile/DBISHT4U",
+      "category": "dev",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 1047
+    },
+    {
+      "site": "Snapchat",
+      "url": "https://www.snapchat.com/add/DBISHT4U",
+      "category": "social",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 1058
+    },
+    {
+      "site": "Bluesky",
+      "url": "https://bsky.app/profile/DBISHT4U.bsky.social",
+      "category": "social",
+      "status": "Found",
+      "http_code": 200,
+      "response_time_ms": 1157
+    },
+    {
+      "site": "Bitbucket",
+      "url": "https://bitbucket.org/DBISHT4U/",
+      "category": "dev",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 1227
+    },
+    {
+      "site": "Roblox",
+      "url": "https://www.roblox.com/user.aspx?username=DBISHT4U",
+      "category": "gaming",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 1228
+    },
+    {
+      "site": "Carrd",
+      "url": "https://DBISHT4U.carrd.co",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 1035
+    },
+    {
+      "site": "Goodreads",
+      "url": "https://www.goodreads.com/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 994
+    },
+    {
+      "site": "Gravatar",
+      "url": "https://en.gravatar.com/DBISHT4U",
+      "category": "other",
+      "status": "NotFound",
+      "http_code": 404,
+      "response_time_ms": 1812
+    },
+    {
+      "site": "TikTok",
+      "url": "https://www.tiktok.com/@DBISHT4U",
+      "category": "social",
+      "status": {
+        "Error": "timeout"
+      },
+      "http_code": null,
+      "response_time_ms": 8001
+    },
+    {
+      "site": "Imgur",
+      "url": "https://imgur.com/user/DBISHT4U",
+      "category": "media",
+      "status": {
+        "Error": "timeout"
+      },
+      "http_code": null,
+      "response_time_ms": 8001
+    }
+  ]
+}
