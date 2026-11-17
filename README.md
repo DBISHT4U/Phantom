@@ -29,10 +29,20 @@
 ---
 
 
+  <img src="demo.gif" alt="Phantom Demo" width="800">
+
+---
+
 <div align="center">
   <img src="demo.gif" alt="Phantom Demo" width="800">
 </div>
+
+---
+
 ## ⚡ Why Phantom?
+
+> **Phantom is the fastest username reconnaissance tool ever built.** It scans 481 sites in seconds — not minutes. Zero dependencies, single binary, real-time output. Nothing else comes close.
+
 
 | | Sherlock (Python) | GoSearch (Go) | **Phantom (Rust)** |
 |---|---|---|---|
