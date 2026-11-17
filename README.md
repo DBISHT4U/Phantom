@@ -142,6 +142,21 @@ phantom john_doe --sites my-sites.json
 
 MIT
 
+
+<p>
+<img src="https://img.shields.io/badge/-%F0%9F%91%A5%20Social%20Media-E74C3C?style=for-the-badge" alt="">
+<img src="https://img.shields.io/badge/-%F0%9F%92%BB%20Dev%20Platforms-3498DB?style=for-the-badge" alt="">
+<img src="https://img.shields.io/badge/-%F0%9F%8E%AE%20Gaming-2ECC71?style=for-the-badge" alt="">
+<img src="https://img.shields.io/badge/-%F0%9F%8E%B5%20Media-9B59B6?style=for-the-badge" alt="">
+<img src="https://img.shields.io/badge/-%F0%9F%92%AC%20Forums-F39C12?style=for-the-badge" alt="">
+<br>
+<img src="https://img.shields.io/badge/-%F0%9F%8E%A8%20Creative-E91E63?style=for-the-badge" alt="">
+<img src="https://img.shields.io/badge/-%F0%9F%94%92%20Security-1ABC9C?style=for-the-badge" alt="">
+<img src="https://img.shields.io/badge/-%F0%9F%92%B0%20Money-E67E22?style=for-the-badge" alt="">
+<img src="https://img.shields.io/badge/-%F0%9F%94%97%20376%2B%20More-95A5A6?style=for-the-badge" alt="">
+</p>
+
+
 ---
 
 <div align="center">
