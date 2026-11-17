@@ -1,6 +1,6 @@
 [package]
 name = "phantom-osint"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 authors = ["DBISHT4U <dbisht717@gmail.com>"]
 description = "👻 Blazing-fast username hunter — find anyone's digital footprint across 400+ sites in seconds. Rust-powered OSINT."
