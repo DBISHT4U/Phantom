@@ -32,7 +32,6 @@
   <img src="demo.gif" alt="Phantom Demo" width="800">
 
 ---
----
 
 ## ⚡ Why Phantom?
 
