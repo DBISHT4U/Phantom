@@ -1,87 +1,3723 @@
 [
-  {"name":"GitHub","url":"https://github.com/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"GitLab","url":"https://gitlab.com/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"Bitbucket","url":"https://bitbucket.org/{}/","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"Dev.to","url":"https://dev.to/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"Codepen","url":"https://codepen.io/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"HackerRank","url":"https://www.hackerrank.com/profile/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"LeetCode","url":"https://leetcode.com/u/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"Replit","url":"https://replit.com/@{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"npm","url":"https://www.npmjs.com/~{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"PyPI","url":"https://pypi.org/user/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"Crates.io","url":"https://crates.io/users/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"StackOverflow","url":"https://stackoverflow.com/users/{}","check":"body_contains","category":"dev","url_probe":"https://api.stackexchange.com/2.3/users?inname={}&site=stackoverflow","body_match":"\"has_more\""},
-  {"name":"Kaggle","url":"https://www.kaggle.com/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"Docker Hub","url":"https://hub.docker.com/u/{}","check":"status","category":"dev","valid":200,"invalid":404},
-
-  {"name":"Twitter/X","url":"https://x.com/{}","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"Instagram","url":"https://www.instagram.com/{}/","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"Facebook","url":"https://www.facebook.com/{}","check":"body_absent","category":"social","body_absent":"page you requested"},
-  {"name":"TikTok","url":"https://www.tiktok.com/@{}","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"LinkedIn","url":"https://www.linkedin.com/in/{}","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"Pinterest","url":"https://www.pinterest.com/{}/","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"Snapchat","url":"https://www.snapchat.com/add/{}","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"Threads","url":"https://www.threads.net/@{}","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"Mastodon.social","url":"https://mastodon.social/@{}","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"Bluesky","url":"https://bsky.app/profile/{}.bsky.social","check":"status","category":"social","valid":200,"invalid":404},
-  {"name":"Tumblr","url":"https://{}.tumblr.com","check":"status","category":"social","valid":200,"invalid":404},
-
-  {"name":"Reddit","url":"https://www.reddit.com/user/{}","check":"status","category":"forum","valid":200,"invalid":404},
-  {"name":"Quora","url":"https://www.quora.com/profile/{}","check":"status","category":"forum","valid":200,"invalid":404},
-  {"name":"Medium","url":"https://medium.com/@{}","check":"status","category":"forum","valid":200,"invalid":404},
-  {"name":"Hacker News","url":"https://news.ycombinator.com/user?id={}","check":"body_absent","category":"forum","body_absent":"No such user."},
-  {"name":"Hashnode","url":"https://hashnode.com/@{}","check":"status","category":"forum","valid":200,"invalid":404},
-  {"name":"Substack","url":"https://{}.substack.com","check":"status","category":"forum","valid":200,"invalid":404},
-
-  {"name":"YouTube","url":"https://www.youtube.com/@{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Twitch","url":"https://www.twitch.tv/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"SoundCloud","url":"https://soundcloud.com/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Spotify","url":"https://open.spotify.com/user/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Vimeo","url":"https://vimeo.com/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Dailymotion","url":"https://www.dailymotion.com/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Flickr","url":"https://www.flickr.com/people/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Giphy","url":"https://giphy.com/{}","check":"status","category":"media","valid":200,"invalid":404},
-
-  {"name":"Steam","url":"https://steamcommunity.com/id/{}","check":"body_absent","category":"gaming","body_absent":"The specified profile could not be found."},
-  {"name":"Xbox Gamertag","url":"https://xboxgamertag.com/search/{}","check":"status","category":"gaming","valid":200,"invalid":404},
-  {"name":"Chess.com","url":"https://www.chess.com/member/{}","check":"status","category":"gaming","valid":200,"invalid":404},
-  {"name":"Lichess","url":"https://lichess.org/@/{}","check":"status","category":"gaming","valid":200,"invalid":404},
-  {"name":"Roblox","url":"https://www.roblox.com/user.aspx?username={}","check":"body_absent","category":"gaming","body_absent":"Page cannot be found"},
-  {"name":"Minecraft","url":"https://namemc.com/profile/{}","check":"status","category":"gaming","valid":200,"invalid":404},
-
-  {"name":"Dribbble","url":"https://dribbble.com/{}","check":"status","category":"creative","valid":200,"invalid":404},
-  {"name":"Behance","url":"https://www.behance.net/{}","check":"status","category":"creative","valid":200,"invalid":404},
-  {"name":"DeviantArt","url":"https://www.deviantart.com/{}","check":"status","category":"creative","valid":200,"invalid":404},
-  {"name":"ArtStation","url":"https://www.artstation.com/{}","check":"status","category":"creative","valid":200,"invalid":404},
-  {"name":"500px","url":"https://500px.com/p/{}","check":"status","category":"creative","valid":200,"invalid":404},
-  {"name":"Unsplash","url":"https://unsplash.com/@{}","check":"status","category":"creative","valid":200,"invalid":404},
-
-  {"name":"HackerOne","url":"https://hackerone.com/{}","check":"status","category":"security","valid":200,"invalid":404},
-  {"name":"Bugcrowd","url":"https://bugcrowd.com/{}","check":"status","category":"security","valid":200,"invalid":404},
-  {"name":"TryHackMe","url":"https://tryhackme.com/p/{}","check":"status","category":"security","valid":200,"invalid":404},
-  {"name":"HackTheBox","url":"https://app.hackthebox.com/users/{}","check":"status","category":"security","valid":200,"invalid":404},
-
-  {"name":"Gravatar","url":"https://en.gravatar.com/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"About.me","url":"https://about.me/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Keybase","url":"https://keybase.io/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"ProductHunt","url":"https://www.producthunt.com/@{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Patreon","url":"https://www.patreon.com/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"BuyMeACoffee","url":"https://buymeacoffee.com/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Ko-fi","url":"https://ko-fi.com/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Linktree","url":"https://linktr.ee/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Carrd","url":"https://{}.carrd.co","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Telegram","url":"https://t.me/{}","check":"body_absent","category":"social","body_absent":"can you see this page"},
-  {"name":"Fiverr","url":"https://www.fiverr.com/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Freelancer","url":"https://www.freelancer.com/u/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Imgur","url":"https://imgur.com/user/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Goodreads","url":"https://www.goodreads.com/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Last.fm","url":"https://www.last.fm/user/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"MyAnimeList","url":"https://myanimelist.net/profile/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Letterboxd","url":"https://letterboxd.com/{}","check":"status","category":"media","valid":200,"invalid":404},
-  {"name":"Trello","url":"https://trello.com/{}","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Notion","url":"https://{}.notion.site","check":"status","category":"other","valid":200,"invalid":404},
-  {"name":"Itch.io","url":"https://{}.itch.io","check":"status","category":"gaming","valid":200,"invalid":404},
-  {"name":"Wattpad","url":"https://www.wattpad.com/user/{}","check":"status","category":"creative","valid":200,"invalid":404},
-  {"name":"Hugging Face","url":"https://huggingface.co/{}","check":"status","category":"dev","valid":200,"invalid":404},
-  {"name":"Vercel","url":"https://vercel.com/{}","check":"status","category":"dev","valid":200,"invalid":404}
+  {
+    "name": "1337x",
+    "url": "https://www.1337x.to/user/{}/",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<title>Error something went wrong.</title>"
+  },
+  {
+    "name": "2Dimensions",
+    "url": "https://2Dimensions.com/a/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "7Cups",
+    "url": "https://www.7cups.com/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "9GAG",
+    "url": "https://www.9gag.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "APClips",
+    "url": "https://apclips.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Amateur Porn Content Creators"
+  },
+  {
+    "name": "About.me",
+    "url": "https://about.me/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Academia.edu",
+    "url": "https://independent.academia.edu/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "AdmireMe.Vip",
+    "url": "https://admireme.vip/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Page Not Found"
+  },
+  {
+    "name": "Airbit",
+    "url": "https://airbit.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Airliners",
+    "url": "https://www.airliners.net/user/{}/profile/photos",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "All Things Worn",
+    "url": "https://www.allthingsworn.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Sell Used Panties"
+  },
+  {
+    "name": "AllMyLinks",
+    "url": "https://allmylinks.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Page not found"
+  },
+  {
+    "name": "AniWorld",
+    "url": "https://aniworld.to/user/profil/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Dieses Profil ist nicht verfügbar"
+  },
+  {
+    "name": "Anilist",
+    "url": "https://anilist.co/user/{}/",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Apple Developer",
+    "url": "https://developer.apple.com/forums/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Apple Discussions",
+    "url": "https://discussions.apple.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Looking for something in Apple Support Communities?"
+  },
+  {
+    "name": "Aparat",
+    "url": "https://www.aparat.com/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Archive of Our Own",
+    "url": "https://archiveofourown.org/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Archive.org",
+    "url": "https://archive.org/details/@{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "could not fetch an account with user item identifier"
+  },
+  {
+    "name": "Arduino Forum",
+    "url": "https://forum.arduino.cc/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "ArtStation",
+    "url": "https://www.artstation.com/{}",
+    "category": "creative",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Asciinema",
+    "url": "https://asciinema.org/~{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Ask Fedora",
+    "url": "https://ask.fedoraproject.org/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Atcoder",
+    "url": "https://atcoder.jp/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Vjudge",
+    "url": "https://VJudge.net/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Audiojungle",
+    "url": "https://audiojungle.net/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Autofrage",
+    "url": "https://www.autofrage.net/nutzer/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Avizo",
+    "url": "https://www.avizo.cz/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "AWS Skills Profile",
+    "url": "https://skillsprofile.skillbuilder.aws/user/{}/",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "shareProfileAccepted\":false"
+  },
+  {
+    "name": "BOOTH",
+    "url": "https://{}.booth.pm/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Bandcamp",
+    "url": "https://www.bandcamp.com/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Bazar.cz",
+    "url": "https://www.bazar.cz/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Behance",
+    "url": "https://www.behance.net/{}",
+    "category": "creative",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Bezuzyteczna",
+    "url": "https://bezuzyteczna.pl/uzytkownicy/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BiggerPockets",
+    "url": "https://www.biggerpockets.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BioHacking",
+    "url": "https://forum.dangerousthings.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BitBucket",
+    "url": "https://bitbucket.org/{}/",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Bitwarden Forum",
+    "url": "https://community.bitwarden.com/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Blipfoto",
+    "url": "https://www.blipfoto.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Blitz Tactics",
+    "url": "https://blitztactics.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "That page doesn't exist"
+  },
+  {
+    "name": "Blogger",
+    "url": "https://{}.blogspot.com",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Bluesky",
+    "url": "https://bsky.app/profile/{}.bsky.social",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BongaCams",
+    "url": "https://pt.bongacams.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Bookcrossing",
+    "url": "https://www.bookcrossing.com/mybookshelf/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BoardGameGeek",
+    "url": "https://boardgamegeek.com/user/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "\"isValid\":true"
+  },
+  {
+    "name": "BraveCommunity",
+    "url": "https://community.brave.com/u/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BreachSta.rs Forum",
+    "url": "https://breachsta.rs/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<title>Error - BreachStars</title>"
+  },
+  {
+    "name": "BugCrowd",
+    "url": "https://bugcrowd.com/{}",
+    "category": "security",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BuyMeACoffee",
+    "url": "https://buymeacoff.ee/{}",
+    "category": "money",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BuzzFeed",
+    "url": "https://buzzfeed.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Cfx.re Forum",
+    "url": "https://forum.cfx.re/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "CGTrader",
+    "url": "https://www.cgtrader.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "CNET",
+    "url": "https://www.cnet.com/profiles/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "CSSBattle",
+    "url": "https://cssbattle.dev/player/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "CTAN",
+    "url": "https://ctan.org/author/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Caddy Community",
+    "url": "https://caddy.community/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Car Talk Community",
+    "url": "https://community.cartalk.com/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Carbonmade",
+    "url": "https://{}.carbonmade.com",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Carrd",
+    "url": "https://{}.carrd.co/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Career.habr",
+    "url": "https://career.habr.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<h1>Ошибка 404</h1>"
+  },
+  {
+    "name": "CashApp",
+    "url": "https://cash.app/${}",
+    "category": "money",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Championat",
+    "url": "https://www.championat.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Chaos",
+    "url": "https://chaos.social/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Chatujme.cz",
+    "url": "https://profil.chatujme.cz/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Neexistujicí profil"
+  },
+  {
+    "name": "ChaturBate",
+    "url": "https://chaturbate.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Chess",
+    "url": "https://www.chess.com/member/{}",
+    "category": "gaming",
+    "check": "body_absent",
+    "body_absent": "Username is valid"
+  },
+  {
+    "name": "Choice Community",
+    "url": "https://choice.community/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Clapper",
+    "url": "https://clapperapp.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "CloudflareCommunity",
+    "url": "https://community.cloudflare.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Clozemaster",
+    "url": "https://www.clozemaster.com/players/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Oh no! Player not found."
+  },
+  {
+    "name": "Clubhouse",
+    "url": "https://www.clubhouse.com/@{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Code Snippet Wiki",
+    "url": "https://codesnippets.fandom.com/wiki/User:{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "This user has not filled out their profile page yet"
+  },
+  {
+    "name": "Codeberg",
+    "url": "https://codeberg.org/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Codecademy",
+    "url": "https://www.codecademy.com/profiles/{}",
+    "category": "dev",
+    "check": "body_absent",
+    "body_absent": "This profile could not be found"
+  },
+  {
+    "name": "Codechef",
+    "url": "https://www.codechef.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Codeforces",
+    "url": "https://codeforces.com/profile/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Codepen",
+    "url": "https://codepen.io/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Coders Rank",
+    "url": "https://profile.codersrank.io/user/{}/",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "not a registered member"
+  },
+  {
+    "name": "Coderwall",
+    "url": "https://coderwall.com/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "CodeSandbox",
+    "url": "https://codesandbox.io/u/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Could not find user with username"
+  },
+  {
+    "name": "Codewars",
+    "url": "https://www.codewars.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Codolio",
+    "url": "https://codolio.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<title>Page Not Found | Codolio</title>"
+  },
+  {
+    "name": "Coinvote",
+    "url": "https://coinvote.cc/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "ColourLovers",
+    "url": "https://www.colourlovers.com/lover/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Contently",
+    "url": "https://{}.contently.com/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Coroflot",
+    "url": "https://www.coroflot.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Cplusplus",
+    "url": "https://cplusplus.com/user/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<title>404 Page Not Found</title>"
+  },
+  {
+    "name": "Cracked",
+    "url": "https://www.cracked.com/members/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Cracked Forum",
+    "url": "https://cracked.ax/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Credly",
+    "url": "https://www.credly.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Crevado",
+    "url": "https://{}.crevado.com",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Crowdin",
+    "url": "https://crowdin.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "CryptoHack",
+    "url": "https://cryptohack.org/user/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Cryptomator Forum",
+    "url": "https://community.cryptomator.org/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Cults3D",
+    "url": "https://cults3d.com/en/users/{}/creations",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Oh dear, this page is not working!"
+  },
+  {
+    "name": "CyberDefenders",
+    "url": "https://cyberdefenders.org/p/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "DEV Community",
+    "url": "https://dev.to/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "DMOJ",
+    "url": "https://dmoj.ca/user/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "No such user"
+  },
+  {
+    "name": "DailyMotion",
+    "url": "https://www.dailymotion.com/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "dcinside",
+    "url": "https://gallog.dcinside.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Dealabs",
+    "url": "https://www.dealabs.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "La page que vous essayez"
+  },
+  {
+    "name": "DeviantArt",
+    "url": "https://www.deviantart.com/{}",
+    "category": "creative",
+    "check": "body_absent",
+    "body_absent": "Llama Not Found"
+  },
+  {
+    "name": "DigitalSpy",
+    "url": "https://forums.digitalspy.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The page you were looking for could not be found."
+  },
+  {
+    "name": "Discogs",
+    "url": "https://www.discogs.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Discord",
+    "url": "https://discord.com",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "{\"taken\":false}"
+  },
+  {
+    "name": "Discord.bio",
+    "url": "https://discords.com/api-v2/bio/details/{}",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "<title>Server Error (500)</title>"
+  },
+  {
+    "name": "Discuss.Elastic.co",
+    "url": "https://discuss.elastic.co/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Diskusjon.no",
+    "url": "https://www.diskusjon.no",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "{\"result\":\"ok\"}"
+  },
+  {
+    "name": "Disqus",
+    "url": "https://disqus.com/{}",
+    "category": "forum",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Docker Hub",
+    "url": "https://hub.docker.com/u/{}/",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Dribbble",
+    "url": "https://dribbble.com/{}",
+    "category": "creative",
+    "check": "body_absent",
+    "body_absent": "Whoops, that page is gone."
+  },
+  {
+    "name": "Duolingo",
+    "url": "https://www.duolingo.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "{\"users\":[]}"
+  },
+  {
+    "name": "Eintracht Frankfurt Forum",
+    "url": "https://community.eintracht.de/fans/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Empretienda AR",
+    "url": "https://{}.empretienda.com.ar",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Envato Forum",
+    "url": "https://forums.envato.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Erome",
+    "url": "https://www.erome.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Exposure",
+    "url": "https://{}.exposure.co/",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "exophase",
+    "url": "https://www.exophase.com/user/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "EyeEm",
+    "url": "https://www.eyeem.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "F3.cool",
+    "url": "https://f3.cool/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Fameswap",
+    "url": "https://fameswap.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Fandom",
+    "url": "https://www.fandom.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Fanpop",
+    "url": "https://www.fanpop.com/fans/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Finanzfrage",
+    "url": "https://www.finanzfrage.net/nutzer/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Flickr",
+    "url": "https://www.flickr.com/people/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Flightradar24",
+    "url": "https://my.flightradar24.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Flipboard",
+    "url": "https://flipboard.com/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Football",
+    "url": "https://www.rusfootball.info/user/{}/",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Пользователь с таким именем не найден"
+  },
+  {
+    "name": "FortniteTracker",
+    "url": "https://fortnitetracker.com/profile/all/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Forum Ophilia",
+    "url": "https://www.forumophilia.com/profile.php?mode=viewprofile&u={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "that user does not exist"
+  },
+  {
+    "name": "Fosstodon",
+    "url": "https://fosstodon.org/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Framapiaf",
+    "url": "https://framapiaf.org/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Freelancer",
+    "url": "https://www.freelancer.com/u/{}",
+    "category": "creative",
+    "check": "body_absent",
+    "body_absent": "\"users\":{}"
+  },
+  {
+    "name": "Freesound",
+    "url": "https://freesound.org/people/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "GNOME VCS",
+    "url": "https://gitlab.gnome.org/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "GaiaOnline",
+    "url": "https://www.gaiaonline.com/profiles/{}",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "No user ID specified or user does not exist"
+  },
+  {
+    "name": "Gamespot",
+    "url": "https://www.gamespot.com/profile/{}/",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "GameFAQs",
+    "url": "https://gamefaqs.gamespot.com/community/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "GeeksforGeeks",
+    "url": "https://auth.geeksforgeeks.org/user/{}",
+    "category": "dev",
+    "check": "body_absent",
+    "body_absent": "false   | GeeksforGeeks Profile"
+  },
+  {
+    "name": "Genius (Artists)",
+    "url": "https://genius.com/artists/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Genius (Users)",
+    "url": "https://genius.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Gesundheitsfrage",
+    "url": "https://www.gesundheitsfrage.net/nutzer/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "GetMyUni",
+    "url": "https://www.getmyuni.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Giant Bomb",
+    "url": "https://www.giantbomb.com/profile/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Giphy",
+    "url": "https://giphy.com/{}",
+    "category": "media",
+    "check": "body_absent",
+    "body_absent": "<title> GIFs - Find &amp; Share on GIPHY</title>"
+  },
+  {
+    "name": "GitBook",
+    "url": "https://{}.gitbook.io/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "GitHub",
+    "url": "https://www.github.com/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Warframe Market",
+    "url": "https://warframe.market/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "GitLab",
+    "url": "https://gitlab.com/{}",
+    "category": "dev",
+    "check": "body_absent",
+    "body_absent": "[]"
+  },
+  {
+    "name": "Gitea",
+    "url": "https://gitea.com/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Gitee",
+    "url": "https://gitee.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "GoodReads",
+    "url": "https://www.goodreads.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Google Play",
+    "url": "https://play.google.com/store/apps/developer?id={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "the requested URL was not found on this server"
+  },
+  {
+    "name": "Gradle",
+    "url": "https://plugins.gradle.org/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Grailed",
+    "url": "https://www.grailed.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Gravatar",
+    "url": "http://en.gravatar.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Gumroad",
+    "url": "https://www.gumroad.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Page not found (404) - Gumroad"
+  },
+  {
+    "name": "Gutefrage",
+    "url": "https://www.gutefrage.net/nutzer/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "HackTheBox",
+    "url": "https://forum.hackthebox.com/u/{}",
+    "category": "security",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Hackaday",
+    "url": "https://hackaday.io/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "HackenProof (Hackers)",
+    "url": "https://hackenproof.com/hackers/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Page not found"
+  },
+  {
+    "name": "HackerEarth",
+    "url": "https://hackerearth.com/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "HackerNews",
+    "url": "https://news.ycombinator.com/user?id={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "No such user."
+  },
+  {
+    "name": "HackerOne",
+    "url": "https://hackerone.com/{}",
+    "category": "security",
+    "check": "body_absent",
+    "body_absent": "Page not found"
+  },
+  {
+    "name": "HackerRank",
+    "url": "https://hackerrank.com/{}",
+    "category": "dev",
+    "check": "body_absent",
+    "body_absent": "Something went wrong"
+  },
+  {
+    "name": "HackerSploit",
+    "url": "https://forum.hackersploit.org/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "HackMD",
+    "url": "https://hackmd.io/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Harvard Scholar",
+    "url": "https://scholar.harvard.edu/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Hashnode",
+    "url": "https://hashnode.com/@{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Heavy-R",
+    "url": "https://www.heavy-r.com/user/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Channel not found"
+  },
+  {
+    "name": "Hive Blog",
+    "url": "https://hive.blog/@{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<title>User Not Found - Hive</title>"
+  },
+  {
+    "name": "Holopin",
+    "url": "https://holopin.io/@{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "true"
+  },
+  {
+    "name": "Houzz",
+    "url": "https://houzz.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "HubPages",
+    "url": "https://hubpages.com/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Hubski",
+    "url": "https://hubski.com/user/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "No such user"
+  },
+  {
+    "name": "HudsonRock",
+    "url": "https://cavalier.hudsonrock.com/api/json/v2/osint-tools/search-by-username?username={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "This username is not associated"
+  },
+  {
+    "name": "Hugging Face",
+    "url": "https://huggingface.co/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "IFTTT",
+    "url": "https://www.ifttt.com/p/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Ifunny",
+    "url": "https://ifunny.co/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "IRC-Galleria",
+    "url": "https://irc-galleria.net/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Icons8 Community",
+    "url": "https://community.icons8.com/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Image Fap",
+    "url": "https://www.imagefap.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Not found"
+  },
+  {
+    "name": "ImgUp.cz",
+    "url": "https://imgup.cz/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Imgur",
+    "url": "https://imgur.com/user/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "imood",
+    "url": "https://www.imood.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Instagram",
+    "url": "https://instagram.com/{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Instapaper",
+    "url": "https://www.instapaper.com/p/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Instructables",
+    "url": "https://www.instructables.com/member/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Intigriti",
+    "url": "https://app.intigriti.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Ionic Forum",
+    "url": "https://forum.ionicframework.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Issuu",
+    "url": "https://issuu.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Itch.io",
+    "url": "https://{}.itch.io/",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Itemfix",
+    "url": "https://www.itemfix.com/c/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<title>ItemFix - Channel: </title>"
+  },
+  {
+    "name": "Jellyfin Weblate",
+    "url": "https://translate.jellyfin.org/user/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Jimdo",
+    "url": "https://{}.jimdosite.com",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Joplin Forum",
+    "url": "https://discourse.joplinapp.org/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Jupyter Community Forum",
+    "url": "https://discourse.jupyter.org/u/{}/summary",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Oops! That page doesn’t exist or is private."
+  },
+  {
+    "name": "Kaggle",
+    "url": "https://www.kaggle.com/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "kaskus",
+    "url": "https://www.kaskus.co.id/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Keybase",
+    "url": "https://keybase.io/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Kick",
+    "url": "https://kick.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Kik",
+    "url": "https://kik.me/{}",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "The page you requested was not found"
+  },
+  {
+    "name": "Kongregate",
+    "url": "https://www.kongregate.com/accounts/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Kvinneguiden",
+    "url": "https://forum.kvinneguiden.no",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "{\"result\":\"ok\"}"
+  },
+  {
+    "name": "LOR",
+    "url": "https://www.linux.org.ru/people/{}/profile",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Laracast",
+    "url": "https://laracasts.com/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Launchpad",
+    "url": "https://launchpad.net/~{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "LemmyWorld",
+    "url": "https://lemmy.world/u/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<h1>Error!</h1>"
+  },
+  {
+    "name": "LessWrong",
+    "url": "https://www.lesswrong.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Letterboxd",
+    "url": "https://letterboxd.com/{}",
+    "category": "media",
+    "check": "body_absent",
+    "body_absent": "Sorry, we can’t find the page you’ve requested."
+  },
+  {
+    "name": "LibraryThing",
+    "url": "https://www.librarything.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<p>Error: This user doesn't exist</p>"
+  },
+  {
+    "name": "Lichess",
+    "url": "https://lichess.org/@/{}",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://linkedin.com/in/{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Linktree",
+    "url": "https://linktr.ee/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "\"statusCode\":404"
+  },
+  {
+    "name": "LinuxFR.org",
+    "url": "https://linuxfr.org/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Listed",
+    "url": "https://listed.to/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "LiveJournal",
+    "url": "https://{}.livejournal.com",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Lobsters",
+    "url": "https://lobste.rs/u/{}",
+    "category": "forum",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "LottieFiles",
+    "url": "https://lottiefiles.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "LushStories",
+    "url": "https://www.lushstories.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "MMORPG Forum",
+    "url": "https://forums.mmorpg.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Mamot",
+    "url": "https://mamot.fr/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Medium",
+    "url": "https://medium.com/@{}",
+    "category": "forum",
+    "check": "body_absent",
+    "body_absent": "<body"
+  },
+  {
+    "name": "Memrise",
+    "url": "https://www.memrise.com/user/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Minecraft",
+    "url": "https://api.mojang.com/users/profiles/minecraft/{}",
+    "category": "gaming",
+    "check": "body_absent",
+    "body_absent": "Couldn't find any profile with name"
+  },
+  {
+    "name": "MixCloud",
+    "url": "https://www.mixcloud.com/{}/",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Monkeytype",
+    "url": "https://monkeytype.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Motherless",
+    "url": "https://motherless.com/m/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "no longer a member"
+  },
+  {
+    "name": "Motorradfrage",
+    "url": "https://www.motorradfrage.net/nutzer/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "MuseScore",
+    "url": "https://musescore.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "MyAnimeList",
+    "url": "https://myanimelist.net/profile/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "MyMiniFactory",
+    "url": "https://www.myminifactory.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Mydramalist",
+    "url": "https://www.mydramalist.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The requested page was not found"
+  },
+  {
+    "name": "Myspace",
+    "url": "https://myspace.com/{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "NICommunityForum",
+    "url": "https://community.native-instruments.com/profile/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The page you were looking for could not be found."
+  },
+  {
+    "name": "namuwiki",
+    "url": "https://namu.wiki/w/%EC%82%AC%EC%9A%A9%EC%9E%90:{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "NationStates Nation",
+    "url": "https://nationstates.net/nation={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Was this your nation? It may have ceased to exist due to inactivity, but can rise again!"
+  },
+  {
+    "name": "NationStates Region",
+    "url": "https://nationstates.net/region={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "does not exist."
+  },
+  {
+    "name": "Naver",
+    "url": "https://blog.naver.com/{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Needrom",
+    "url": "https://www.needrom.com/author/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Newgrounds",
+    "url": "https://{}.newgrounds.com",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Nextcloud Forum",
+    "url": "https://help.nextcloud.com/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Nightbot",
+    "url": "https://nightbot.tv/t/{}/commands",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Ninja Kiwi",
+    "url": "https://ninjakiwi.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "NintendoLife",
+    "url": "https://www.nintendolife.com/users/{}",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "NitroType",
+    "url": "https://www.nitrotype.com/racer/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<title>Nitro Type | Competitive Typing Game | Race Your Friends</title>"
+  },
+  {
+    "name": "NotABug.org",
+    "url": "https://notabug.org/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Nothing Community",
+    "url": "https://nothing.community/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Nyaa.si",
+    "url": "https://nyaa.si/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "ObservableHQ",
+    "url": "https://observablehq.com/@{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Page not found"
+  },
+  {
+    "name": "Open Collective",
+    "url": "https://opencollective.com/{}",
+    "category": "money",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "OpenGameArt",
+    "url": "https://opengameart.org/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Odysee",
+    "url": "https://odysee.com/@{}",
+    "category": "media",
+    "check": "body_absent",
+    "body_absent": "<link rel=\"canonical\" content=\"odysee.com\"/>"
+  },
+  {
+    "name": "Opensource",
+    "url": "https://opensource.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "OurDJTalk",
+    "url": "https://ourdjtalk.com/members?username={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The specified member cannot be found"
+  },
+  {
+    "name": "Outgress",
+    "url": "https://outgress.com/agents/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Outgress - Error"
+  },
+  {
+    "name": "PCGamer",
+    "url": "https://forums.pcgamer.com/members/?username={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The specified member cannot be found. Please enter a member's entire name."
+  },
+  {
+    "name": "PSNProfiles.com",
+    "url": "https://psnprofiles.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Packagist",
+    "url": "https://packagist.org/packages/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Pastebin",
+    "url": "https://pastebin.com/u/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Not Found (#404)"
+  },
+  {
+    "name": "Patched",
+    "url": "https://patched.sh/User/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The member you specified is either invalid or doesn't exist."
+  },
+  {
+    "name": "Patreon",
+    "url": "https://www.patreon.com/{}",
+    "category": "money",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "PentesterLab",
+    "url": "https://pentesterlab.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "HotUKdeals",
+    "url": "https://www.hotukdeals.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Mydealz",
+    "url": "https://www.mydealz.de/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Chollometro",
+    "url": "https://www.chollometro.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "PepperNL",
+    "url": "https://nl.pepper.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "PepperPL",
+    "url": "https://www.pepper.pl/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Preisjaeger",
+    "url": "https://www.preisjaeger.at/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Pepperdeals",
+    "url": "https://www.pepperdeals.se/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "PepperealsUS",
+    "url": "https://www.pepperdeals.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Promodescuentos",
+    "url": "https://www.promodescuentos.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Periscope",
+    "url": "https://www.periscope.tv/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Pinkbike",
+    "url": "https://www.pinkbike.com/u/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "pixelfed.social",
+    "url": "https://pixelfed.social/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "PlayStore",
+    "url": "https://play.google.com/store/apps/developer?id={}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Playstrategy",
+    "url": "https://playstrategy.org/@/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Plurk",
+    "url": "https://www.plurk.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "User Not Found!"
+  },
+  {
+    "name": "PocketStars",
+    "url": "https://pocketstars.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Join Your Favorite Adult Stars"
+  },
+  {
+    "name": "Pokemon Showdown",
+    "url": "https://pokemonshowdown.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Polarsteps",
+    "url": "https://polarsteps.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Polygon",
+    "url": "https://www.polygon.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Polymart",
+    "url": "https://polymart.org/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Pornhub",
+    "url": "https://pornhub.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "ProductHunt",
+    "url": "https://www.producthunt.com/@{}",
+    "category": "forum",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "programming.dev",
+    "url": "https://programming.dev/u/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Error!"
+  },
+  {
+    "name": "Pychess",
+    "url": "https://www.pychess.org/@/{}",
+    "category": "gaming",
+    "check": "body_absent",
+    "body_absent": "404"
+  },
+  {
+    "name": "PromoDJ",
+    "url": "http://promodj.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Pronouns.page",
+    "url": "https://pronouns.page/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "PyPi",
+    "url": "https://pypi.org/user/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Python.org Discussions",
+    "url": "https://discuss.python.org/u/{}/summary",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Oops! That page doesn’t exist or is private."
+  },
+  {
+    "name": "Rajce.net",
+    "url": "https://{}.rajce.idnes.cz/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Rarible",
+    "url": "https://rarible.com/marketplace/api/v4/urls/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Rate Your Music",
+    "url": "https://rateyourmusic.com/~{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Rclone Forum",
+    "url": "https://forum.rclone.org/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "RedTube",
+    "url": "https://www.redtube.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Redbubble",
+    "url": "https://www.redbubble.com/people/{}",
+    "category": "creative",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Reddit",
+    "url": "https://www.reddit.com/user/{}",
+    "category": "forum",
+    "check": "body_absent",
+    "body_absent": "Sorry, nobody on Reddit goes by that name."
+  },
+  {
+    "name": "Realmeye",
+    "url": "https://www.realmeye.com/player/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Sorry, but we either:"
+  },
+  {
+    "name": "Reisefrage",
+    "url": "https://www.reisefrage.net/nutzer/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Replit.com",
+    "url": "https://replit.com/@{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "ResearchGate",
+    "url": "https://www.researchgate.net/profile/{}",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "ReverbNation",
+    "url": "https://www.reverbnation.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Sorry, we couldn't find that page"
+  },
+  {
+    "name": "Roblox",
+    "url": "https://www.roblox.com/user.aspx?username={}",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "RocketTube",
+    "url": "https://www.rockettube.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "OOPS! Houston, we have a problem"
+  },
+  {
+    "name": "RoyalCams",
+    "url": "https://royalcams.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Ruby Forums",
+    "url": "https://ruby-forum.com/u/{}/summary",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Oops! That page doesn’t exist or is private."
+  },
+  {
+    "name": "RubyGems",
+    "url": "https://rubygems.org/profiles/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Rumble",
+    "url": "https://rumble.com/user/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "RuneScape",
+    "url": "https://apps.runescape.com/runemetrics/app/overview/player/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "{\"error\":\"NO_PROFILE\",\"loggedIn\":\"false\"}"
+  },
+  {
+    "name": "SWAPD",
+    "url": "https://swapd.co/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Sbazar.cz",
+    "url": "https://www.sbazar.cz/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Scratch",
+    "url": "https://scratch.mit.edu/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Scribd",
+    "url": "https://www.scribd.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Page not found"
+  },
+  {
+    "name": "SEOForum",
+    "url": "https://seoforum.com/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Shelf",
+    "url": "https://www.shelf.im/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "ShitpostBot5000",
+    "url": "https://www.shitpostbot.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Signal",
+    "url": "https://community.signalusers.org/u/{}",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "Oops! That page doesn’t exist or is private."
+  },
+  {
+    "name": "Sketchfab",
+    "url": "https://sketchfab.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Slack",
+    "url": "https://{}.slack.com",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Slant",
+    "url": "https://www.slant.co/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Slashdot",
+    "url": "https://slashdot.org/~{}",
+    "category": "forum",
+    "check": "body_absent",
+    "body_absent": "user you requested does not exist"
+  },
+  {
+    "name": "SlideShare",
+    "url": "https://slideshare.net/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "<title>Page no longer exists</title>"
+  },
+  {
+    "name": "Slides",
+    "url": "https://slides.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "SmugMug",
+    "url": "https://{}.smugmug.com",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Smule",
+    "url": "https://www.smule.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Smule | Page Not Found (404)"
+  },
+  {
+    "name": "Snapchat",
+    "url": "https://www.snapchat.com/add/{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "SOOP",
+    "url": "https://www.sooplive.co.kr/station/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "SoundCloud",
+    "url": "https://soundcloud.com/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "SourceForge",
+    "url": "https://sourceforge.net/u/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "SpaceHey",
+    "url": "https://spacehey.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Not Found (Error 404) | SpaceHey"
+  },
+  {
+    "name": "SoylentNews",
+    "url": "https://soylentnews.org/~{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The user you requested does not exist, no matter how much you wish this might be the case."
+  },
+  {
+    "name": "SpeakerDeck",
+    "url": "https://speakerdeck.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Speedrun.com",
+    "url": "https://speedrun.com/users/{}",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Spells8",
+    "url": "https://forum.spells8.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Splice",
+    "url": "https://splice.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Splits.io",
+    "url": "https://splits.io/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Sporcle",
+    "url": "https://www.sporcle.com/user/{}/people",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Sportlerfrage",
+    "url": "https://www.sportlerfrage.net/nutzer/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "SportsRU",
+    "url": "https://www.sports.ru/profile/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Spotify",
+    "url": "https://open.spotify.com/user/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Star Citizen",
+    "url": "https://robertsspaceindustries.com/citizens/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "404"
+  },
+  {
+    "name": "Status Cafe",
+    "url": "https://status.cafe/users/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Page Not Found"
+  },
+  {
+    "name": "Steam Community (Group)",
+    "url": "https://steamcommunity.com/groups/{}",
+    "category": "gaming",
+    "check": "body_absent",
+    "body_absent": "No group could be retrieved for the given URL"
+  },
+  {
+    "name": "Steam Community (User)",
+    "url": "https://steamcommunity.com/id/{}/",
+    "category": "gaming",
+    "check": "body_absent",
+    "body_absent": "The specified profile could not be found"
+  },
+  {
+    "name": "Strava",
+    "url": "https://www.strava.com/athletes/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Substack",
+    "url": "https://{}.substack.com/",
+    "category": "forum",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "SublimeForum",
+    "url": "https://forum.sublimetext.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "TETR.IO",
+    "url": "https://ch.tetr.io/u/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "No such user!"
+  },
+  {
+    "name": "TheMovieDB",
+    "url": "https://www.themoviedb.org/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "TikTok",
+    "url": "https://www.tiktok.com/@{}",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "\"statusCode\":10221"
+  },
+  {
+    "name": "Tiendanube",
+    "url": "https://{}.mitiendanube.com/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Topcoder",
+    "url": "https://profiles.topcoder.com/{}/",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Topmate",
+    "url": "https://topmate.io/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "TRAKTRAIN",
+    "url": "https://traktrain.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Telegram",
+    "url": "https://t.me/{}",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "<title>Telegram Messenger</title>"
+  },
+  {
+    "name": "Tellonym.me",
+    "url": "https://tellonym.me/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Tenor",
+    "url": "https://tenor.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Terraria Forums",
+    "url": "https://forums.terraria.org/index.php?search/42798315/&c[users]={}&o=relevance",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The following members could not be found"
+  },
+  {
+    "name": "ThemeForest",
+    "url": "https://themeforest.net/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "tistory",
+    "url": "https://{}.tistory.com/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "TnAFlix",
+    "url": "https://www.tnaflix.com/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "TradingView",
+    "url": "https://www.tradingview.com/u/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Trakt",
+    "url": "https://www.trakt.tv/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "TrashboxRU",
+    "url": "https://trashbox.ru/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Trawelling",
+    "url": "https://traewelling.de/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Trello",
+    "url": "https://trello.com/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "model not found"
+  },
+  {
+    "name": "TryHackMe",
+    "url": "https://tryhackme.com/p/{}",
+    "category": "security",
+    "check": "body_absent",
+    "body_absent": "{\"success\":false}"
+  },
+  {
+    "name": "Tuna",
+    "url": "https://tuna.voicemod.net/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Tweakers",
+    "url": "https://tweakers.net/gallery/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Twitch",
+    "url": "https://www.twitch.tv/{}",
+    "category": "media",
+    "check": "body_absent",
+    "body_absent": "content='Twitch is the world&#39;s leading video platform and community for gamers.'"
+  },
+  {
+    "name": "Trovo",
+    "url": "https://trovo.live/s/{}/",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Uh Ohhh..."
+  },
+  {
+    "name": "Twitter",
+    "url": "https://x.com/{}",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "<div class=\"error-panel\"><span>User "
+  },
+  {
+    "name": "Typeracer",
+    "url": "https://data.typeracer.com/pit/profile?user={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Profile Not Found"
+  },
+  {
+    "name": "Ultimate-Guitar",
+    "url": "https://ultimate-guitar.com/u/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Unsplash",
+    "url": "https://unsplash.com/@{}",
+    "category": "creative",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Untappd",
+    "url": "https://untappd.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Valorant Forums",
+    "url": "https://valorantforums.com/u/{}",
+    "category": "gaming",
+    "check": "body_absent",
+    "body_absent": "The page you requested could not be found."
+  },
+  {
+    "name": "VK",
+    "url": "https://vk.com/{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "VSCO",
+    "url": "https://vsco.co/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Velog",
+    "url": "https://velog.io/@{}/posts",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Velomania",
+    "url": "https://forum.velomania.ru/member.php?username={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Пользователь не зарегистрирован и не имеет профиля для просмотра."
+  },
+  {
+    "name": "Venmo",
+    "url": "https://account.venmo.com/u/{}",
+    "category": "money",
+    "check": "body_absent",
+    "body_absent": "Venmo | Page Not Found"
+  },
+  {
+    "name": "Vero",
+    "url": "https://vero.co/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Not Found"
+  },
+  {
+    "name": "Vimeo",
+    "url": "https://vimeo.com/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "VirusTotal",
+    "url": "https://www.virustotal.com/gui/user/{}",
+    "category": "security",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "VLR",
+    "url": "https://www.vlr.gg/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "WICG Forum",
+    "url": "https://discourse.wicg.io/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Wakatime",
+    "url": "https://wakatime.com/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Warrior Forum",
+    "url": "https://www.warriorforum.com/members/{}.html",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Wattpad",
+    "url": "https://www.wattpad.com/user/{}",
+    "category": "creative",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "WebNode",
+    "url": "https://{}.webnode.cz/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Weblate",
+    "url": "https://hosted.weblate.org/user/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Weebly",
+    "url": "https://{}.weebly.com/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Wikidot",
+    "url": "http://www.wikidot.com/user:info/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "User does not exist."
+  },
+  {
+    "name": "Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Special:CentralAuth/{}?uselang=qqx",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "centralauth-admin-nonexistent:"
+  },
+  {
+    "name": "Windy",
+    "url": "https://community.windy.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Wix",
+    "url": "https://{}.wix.com",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "WolframalphaForum",
+    "url": "https://community.wolfram.com/web/{}/home",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "WordPress",
+    "url": "https://{}.wordpress.com/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "WordPressOrg",
+    "url": "https://profiles.wordpress.org/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Wordnik",
+    "url": "https://www.wordnik.com/users/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Page Not Found"
+  },
+  {
+    "name": "Wykop",
+    "url": "https://www.wykop.pl/ludzie/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Xbox Gamertag",
+    "url": "https://xboxgamertag.com/search/{}",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Xvideos",
+    "url": "https://xvideos.com/profiles/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "YandexMusic",
+    "url": "https://music.yandex/users/{}/playlists",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Ошибка 404"
+  },
+  {
+    "name": "YouNow",
+    "url": "https://www.younow.com/{}/",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "No users found"
+  },
+  {
+    "name": "YouPic",
+    "url": "https://youpic.com/photographer/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "YouPorn",
+    "url": "https://youporn.com/uservids/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com/@{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "akniga",
+    "url": "https://akniga.org/profile/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "authorSTREAM",
+    "url": "http://www.authorstream.com/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "babyblogRU",
+    "url": "https://www.babyblog.ru/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "chaos.social",
+    "url": "https://chaos.social/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "couchsurfing",
+    "url": "https://www.couchsurfing.com/people/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "d3RU",
+    "url": "https://d3.ru/user/{}/posts",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "dailykos",
+    "url": "https://www.dailykos.com/user/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "{\"result\":true,\"message\":null}"
+  },
+  {
+    "name": "datingRU",
+    "url": "http://dating.ru/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "devRant",
+    "url": "https://devrant.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "drive2",
+    "url": "https://www.drive2.ru/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "eGPU",
+    "url": "https://egpu.io/forums/profile/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "eintracht",
+    "url": "https://community.eintracht.de/fans/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "fixya",
+    "url": "https://www.fixya.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "fl",
+    "url": "https://www.fl.ru/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "forum_guns",
+    "url": "https://forum.guns.ru/forummisc/blog/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "action=https://forum.guns.ru/forummisc/blog/search"
+  },
+  {
+    "name": "freecodecamp",
+    "url": "https://www.freecodecamp.org/{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "furaffinity",
+    "url": "https://www.furaffinity.net/user/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "This user cannot be found."
+  },
+  {
+    "name": "geocaching",
+    "url": "https://www.geocaching.com/p/default.aspx?u={}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "habr",
+    "url": "https://habr.com/ru/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "hackster",
+    "url": "https://www.hackster.io/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "hunting",
+    "url": "https://www.hunting.ru/forum/members/?username={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Указанный пользователь не найден. Пожалуйста, введите другое имя."
+  },
+  {
+    "name": "igromania",
+    "url": "http://forum.igromania.ru/member.php?username={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Пользователь не зарегистрирован и не имеет профиля для просмотра."
+  },
+  {
+    "name": "interpals",
+    "url": "https://www.interpals.net/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "The requested user does not exist or is inactive"
+  },
+  {
+    "name": "irecommend",
+    "url": "https://irecommend.ru/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "jbzd.com.pl",
+    "url": "https://jbzd.com.pl/uzytkownik/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "jeuxvideo",
+    "url": "https://www.jeuxvideo.com/profil/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "kofi",
+    "url": "https://ko-fi.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "kwork",
+    "url": "https://kwork.ru/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "last.fm",
+    "url": "https://last.fm/user/{}",
+    "category": "media",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "leasehackr",
+    "url": "https://forum.leasehackr.com/u/{}/summary/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "livelib",
+    "url": "https://www.livelib.ru/reader/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "mastodon.cloud",
+    "url": "https://mastodon.cloud/@{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "mastodon.social",
+    "url": "https://mastodon.social/@{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "mastodon.xyz",
+    "url": "https://mastodon.xyz/@{}",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "mstdn.social",
+    "url": "https://mstdn.social/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "mercadolivre",
+    "url": "https://www.mercadolivre.com.br/perfil/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "minds",
+    "url": "https://www.minds.com/{}/",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "\"valid\":true"
+  },
+  {
+    "name": "moikrug",
+    "url": "https://moikrug.ru/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "mstdn.io",
+    "url": "https://mstdn.io/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "nairaland.com",
+    "url": "https://www.nairaland.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "n8n Community",
+    "url": "https://community.n8n.io/u/{}/summary",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "nnRU",
+    "url": "https://{}.www.nn.ru/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "note",
+    "url": "https://note.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "npm",
+    "url": "https://www.npmjs.com/~{}",
+    "category": "dev",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "omg.lol",
+    "url": "https://{}.omg.lol",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "\"available\": true"
+  },
+  {
+    "name": "opennet",
+    "url": "https://www.opennet.ru/~{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Имя участника не найдено"
+  },
+  {
+    "name": "osu!",
+    "url": "https://osu.ppy.sh/users/{}",
+    "category": "gaming",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "phpRU",
+    "url": "https://php.ru/forum/members/?username={}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Указанный пользователь не найден. Пожалуйста, введите другое имя."
+  },
+  {
+    "name": "pikabu",
+    "url": "https://pikabu.ru/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Pinterest",
+    "url": "https://www.pinterest.com/{}/",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "pr0gramm",
+    "url": "https://pr0gramm.com/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "prog.hu",
+    "url": "https://prog.hu/azonosito/info/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "satsisRU",
+    "url": "https://satsis.info/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "sessionize",
+    "url": "https://sessionize.com/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "social.tchncs.de",
+    "url": "https://social.tchncs.de/@{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "spletnik",
+    "url": "https://spletnik.ru/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "svidbook",
+    "url": "https://www.svidbook.ru/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "threads",
+    "url": "https://www.threads.net/@{}",
+    "category": "social",
+    "check": "body_absent",
+    "body_absent": "<title>Threads • Log in</title>"
+  },
+  {
+    "name": "toster",
+    "url": "https://www.toster.ru/user/{}/answers",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "tumblr",
+    "url": "https://{}.tumblr.com/",
+    "category": "social",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "uid",
+    "url": "http://uid.me/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "write.as",
+    "url": "https://write.as/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "xHamster",
+    "url": "https://xhamster.com/users/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "znanylekarz.pl",
+    "url": "https://www.znanylekarz.pl/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "Platzi",
+    "url": "https://platzi.com/p/{}/",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "BabyRu",
+    "url": "https://www.baby.ru/u/{}",
+    "category": "other",
+    "check": "body_absent",
+    "body_absent": "Страница, которую вы искали, не найдена"
+  },
+  {
+    "name": "Wowhead",
+    "url": "https://wowhead.com/user={}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "addons.wago.io",
+    "url": "https://addons.wago.io/user/{}",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  },
+  {
+    "name": "CurseForge",
+    "url": "https://www.curseforge.com/members/{}/projects",
+    "category": "other",
+    "check": "status",
+    "valid": 200,
+    "invalid": 404
+  }
 ]
