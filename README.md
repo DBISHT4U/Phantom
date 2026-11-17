@@ -12,7 +12,7 @@
 <h3>👻 Hunt usernames across the internet — at the speed of Rust</h3>
 
 <p>
-  <strong>Find anyone's digital footprint across 80+ sites in seconds.</strong><br>
+  <strong>Find anyone's digital footprint across 481 sites in seconds.</strong><br>
   The fastest username OSINT tool ever built.
 </p>
 
@@ -20,7 +20,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <a href="https://www.rust-lang.org/"><img src="https://img.shields.io/badge/Rust-1.75%2B-orange.svg?logo=rust" alt="Rust"></a>
   <a href="https://crates.io/crates/phantom-osint"><img src="https://img.shields.io/crates/v/phantom-osint.svg" alt="Crates.io"></a>
-  <img src="https://img.shields.io/badge/Sites-80%2B-green.svg" alt="Sites">
+  <img src="https://img.shields.io/badge/Sites-481-brightgreen.svg" alt="Sites">
   <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg" alt="Platform">
 </p>
 
