@@ -28,6 +28,10 @@
 
 ---
 
+
+<div align="center">
+  <img src="demo.gif" alt="Phantom Demo" width="800">
+</div>
 ## ⚡ Why Phantom?
 
 | | Sherlock (Python) | GoSearch (Go) | **Phantom (Rust)** |
